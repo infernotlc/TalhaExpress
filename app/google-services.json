@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "950275090955",
+    "project_id": "talhaexpress-4df57",
+    "storage_bucket": "talhaexpress-4df57.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950275090955:android:8fb38257681635255df50e",
+        "android_client_info": {
+          "package_name": "com.tlh.talhaexpress"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6kLtq1aQgpQQnZfZ0bfSZZGsREqSXG64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
