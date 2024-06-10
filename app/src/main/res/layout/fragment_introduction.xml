@@ -67,6 +67,7 @@
         style="@style/blueButtonStyle"
         android:layout_width="189dp"
         android:layout_height="70dp"
+        android:background="@color/g_red"
         android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/tvQuality"
@@ -99,7 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.19" />
+        app:layout_constraintGuide_percent="0.19015048" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineEllipseBottom"
