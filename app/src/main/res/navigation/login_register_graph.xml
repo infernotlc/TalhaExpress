@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_register_graph"
+    app:startDestination="@id/registerFragment">
+
+    <fragment
+        android:id="@+id/introductionFragment"
+        android:name="com.tlh.talhaexpress3.fragments.loginRegister.IntroductionFragment"
+        android:label="IntroductionFragment"
+        tools:layout="@layout/fragment_introduction">
+        <action
+            android:id="@+id/action_introductionFragment_to_accountsOptionsFragment"
+            app:destination="@id/accountsOptionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountsOptionsFragment"
+        android:name="com.tlh.talhaexpress3.fragments.loginRegister.AccountsOptionsFragment"
+        android:label="AccountsOptionsFragment"
+        tools:layout="@layout/fragment_account_options">
+        <action
+            android:id="@+id/action_accountsOptionsFragment_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+        <action
+            android:id="@+id/action_accountsOptionsFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.tlh.talhaexpress3.fragments.loginRegister.FragmentLogin"
+        android:label="FragmentLogin"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_fragmentLogin_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.tlh.talhaexpress3.fragments.loginRegister.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
+</navigation>

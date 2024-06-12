@@ -1,55 +1,24 @@
 [versions]
 agp = "8.4.0"
-artifactid = "version"
-circleimageview = "3.1.0"
-firebaseAuth = "23.0.0"
-glide = "4.16.0"
-googleServices = "4.4.2"
-hiltAndroid = "2.38.1"
-hiltAndroidGradlePluginVersion = "2.40.1"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 appcompat = "1.7.0"
-kotlinxCoroutinesPlayServices = "1.7.3"
-loadingButtonAndroid = "2.2.0"
 material = "1.12.0"
 activity = "1.9.0"
 constraintlayout = "2.1.4"
-navigationFragmentKtx = "2.5.2"
-navigationFragmentKtxVersion = "2.7.7"
-navigationSafeArgsGradlePlugin = "2.5.0"
-navigationUiKtx = "2.5.2"
-stepview = "1.5.1"
-viewpagerindicator = "1.0.0-alpha.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-androidx-navigation-fragment-ktx-v252 = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
-androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationSafeArgsGradlePlugin" }
-androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationUiKtx" }
-artifactid = { module = "groupId:artifactId", version.ref = "artifactid" }
-circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
-dagger-hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hiltAndroidGradlePluginVersion" }
-firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuth" }
-glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
-google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-kotlinx-coroutines-play-services = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services", version.ref = "kotlinxCoroutinesPlayServices" }
-loading-button-android = { module = "br.com.simplepass:loading-button-android", version.ref = "loadingButtonAndroid" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtxVersion" }
-stepview = { module = "com.shuhart.stepview:stepview", version.ref = "stepview" }
-viewpagerindicator = { module = "io.github.vejei.viewpagerindicator:viewpagerindicator", version.ref = "viewpagerindicator" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -7,6 +7,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="null"
         android:src="@drawable/blury_background"
         android:scaleType="centerCrop"/>
 
@@ -22,7 +23,7 @@
             android:layout_marginTop="110dp"
             android:drawableStart="@drawable/ic_kleine_shape"
             android:drawablePadding="6dp"
-            android:text="Kleine."
+            android:text="TalhaExpress."
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
             app:layout_constraintTop_toTopOf="parent" />
@@ -137,7 +138,7 @@
             app:layout_constraintTop_toTopOf="@id/googleLogin" />
 
 
-        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        <Button
             android:id="@+id/buttonLoginLogin"
             style="@style/blueButtonStyle"
             android:layout_width="0dp"
@@ -148,7 +149,7 @@
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
             app:layout_constraintTop_toBottomOf="@id/tvForgotPasswordLogin"
-            app:spinning_bar_color="@color/white" />
+             />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineLoginLeft"

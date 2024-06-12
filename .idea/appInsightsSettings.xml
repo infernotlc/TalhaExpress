@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.tlh.talhaexpress" />
-                  <option name="mobileSdkAppId" value="1:950275090955:android:8fb38257681635255df50e" />
-                  <option name="projectId" value="talhaexpress-4df57" />
-                  <option name="projectNumber" value="950275090955" />
+                  <option name="appId" value="com.tlh.talhaexpress3" />
+                  <option name="mobileSdkAppId" value="1:993838107207:android:67caa68ef356d689c6bf62" />
+                  <option name="projectId" value="talhaexpress3" />
+                  <option name="projectNumber" value="993838107207" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

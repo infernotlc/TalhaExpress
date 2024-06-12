@@ -20,7 +20,7 @@
     </style>
 
     <style name="blueButtonStyle">
-        <item name="android:background">@drawable/blue_background</item>
+        <item name="android:background">@drawable/white_background</item>
         <item name="android:fontFamily">@font/poppins_thin</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/h2TextSize</item>

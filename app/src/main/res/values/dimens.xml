@@ -3,4 +3,5 @@
     <dimen name="mediumButtonWidth">200dp</dimen>
     <dimen name="mediumButtonHeight">55dp</dimen>
     <dimen name="edittextHeight">54dp</dimen>
+    <dimen name="buttonCorners">10</dimen>
 </resources>
