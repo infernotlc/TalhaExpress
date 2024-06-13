@@ -11,7 +11,7 @@
 - Navigation
 - Hilt
 - Coroutines
-- Firebase
+- Firebase Auth-Firestore
 - View Binding 
 - Clean Architecture
 - Retrofit
