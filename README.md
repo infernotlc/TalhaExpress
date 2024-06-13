@@ -20,6 +20,8 @@
 - Glide
 - Clean Architecture
 - Viewpager
+- CircleImageView
+- Simplepass Loading Button
 
 🚜👷🚧🏗️
 Under Construction 
