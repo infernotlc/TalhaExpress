@@ -138,7 +138,7 @@
             app:layout_constraintTop_toTopOf="@id/googleLogin" />
 
 
-        <Button
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonLoginLogin"
             style="@style/blueButtonStyle"
             android:layout_width="0dp"

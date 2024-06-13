@@ -5,20 +5,16 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.tlh.talhaexpress3.R
 import com.tlh.talhaexpress3.data.User
 import com.tlh.talhaexpress3.databinding.FragmentRegisterBinding
 import com.tlh.talhaexpress3.utils.RegisterValidation
 import com.tlh.talhaexpress3.utils.Resource
-import com.tlh.talhaexpress3.utils.validateEmail
 import com.tlh.talhaexpress3.viewmodel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 private val TAG = "RegisterFragment"

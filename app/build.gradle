@@ -34,7 +34,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding true
     }
 }
@@ -46,11 +46,12 @@ dependencies {
     implementation libs.material
     implementation libs.androidx.activity
     implementation libs.androidx.constraintlayout
+    implementation libs.firebase.firestore.ktx
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
 
-    apply plugin :"kotlin-kapt"
+    apply plugin: "kotlin-kapt"
 
     def nav_version = "2.5.2"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
@@ -66,10 +67,10 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     //viewpager2 indicatior
-  //  implementation 'io.github.vejei.viewpagerindicator:viewpagerindicator:1.0.0-alpha.1'
+    //  implementation 'io.github.vejei.viewpagerindicator:viewpagerindicator:1.0.0-alpha.1'
 
     //stepView
-   // implementation 'com.shuhart.stepview:stepview:1.5.1'
+    // implementation 'com.shuhart.stepview:stepview:1.5.1'
 
     //Android Ktx
     implementation 'androidx.navigation:navigation-fragment-ktx:2.7.7'

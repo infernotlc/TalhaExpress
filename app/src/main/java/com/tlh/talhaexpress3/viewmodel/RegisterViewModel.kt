@@ -3,7 +3,9 @@ package com.tlh.talhaexpress3.viewmodel
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
 import com.tlh.talhaexpress3.data.User
+import com.tlh.talhaexpress3.utils.Constants.USER_COLLECTION
 import com.tlh.talhaexpress3.utils.RegisterFieldState
 import com.tlh.talhaexpress3.utils.RegisterValidation
 import com.tlh.talhaexpress3.utils.Resource
@@ -19,12 +21,13 @@ import javax.inject.Inject
 
 @HiltViewModel // no requirements for viewmodelfactory and injection
  class RegisterViewModel @Inject constructor(
-    private val firebaseAuth: FirebaseAuth
+    private val firebaseAuth: FirebaseAuth,
+     private val db: FirebaseFirestore
 ) : ViewModel() {
 
     private val _register =
-        MutableStateFlow<Resource<FirebaseUser>>(Resource.Unspecified()) //starting value
-    val register: Flow<Resource<FirebaseUser>> =
+        MutableStateFlow<Resource<User>>(Resource.Unspecified()) //starting value
+    val register: Flow<Resource<User>> =
         _register  // only readable version of register is public
 
     private val _validation = Channel<RegisterFieldState>()
@@ -38,10 +41,11 @@ import javax.inject.Inject
             firebaseAuth.createUserWithEmailAndPassword(user.email, password)
                 .addOnSuccessListener {
                     it.user?.let {
-                        _register.value = Resource.Success(it)
+                  saveUserInfo(it.uid,user)
+
                     }
                 }.addOnFailureListener {
-                    _register.value = Resource.Error(it.toString())
+
                 }
         } else {
             val registerFieldState = RegisterFieldState(
@@ -52,6 +56,17 @@ import javax.inject.Inject
                 _validation.send(registerFieldState)
             }
         }
+    }
+
+    private fun saveUserInfo(userUid:String, user:User){
+        db.collection(USER_COLLECTION)
+            .document(userUid)
+            .set(user)
+            .addOnSuccessListener {
+                _register.value = Resource.Success(user)
+            }.addOnFailureListener {
+                _register.value = Resource.Error(it.toString())
+            }
     }
 
     private fun checkValidation(user: User, password: String): Boolean {
