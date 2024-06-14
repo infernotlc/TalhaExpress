@@ -1,8 +1,12 @@
 package com.tlh.talhaexpress3.viewmodel
 
+import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.ViewModel
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.oAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
 import com.tlh.talhaexpress3.data.User
 import com.tlh.talhaexpress3.utils.Constants.USER_COLLECTION
@@ -20,18 +24,17 @@ import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
 @HiltViewModel // no requirements for viewmodelfactory and injection
- class RegisterViewModel @Inject constructor(
+class RegisterViewModel @Inject constructor(
     private val firebaseAuth: FirebaseAuth,
-     private val db: FirebaseFirestore
+    private val db: FirebaseFirestore
 ) : ViewModel() {
 
     private val _register =
         MutableStateFlow<Resource<User>>(Resource.Unspecified()) //starting value
-    val register: Flow<Resource<User>> =
-        _register  // only readable version of register is public
+    val register: Flow<Resource<User>> = _register  // only readable version of register is public
 
     private val _validation = Channel<RegisterFieldState>()
-     val validation = _validation.receiveAsFlow()
+    val validation = _validation.receiveAsFlow()
 
     fun createAccountWithEmailAndPassword(user: User, password: String) {
         if (checkValidation(user, password)) {
@@ -41,7 +44,7 @@ import javax.inject.Inject
             firebaseAuth.createUserWithEmailAndPassword(user.email, password)
                 .addOnSuccessListener {
                     it.user?.let {
-                  saveUserInfo(it.uid,user)
+                        saveUserInfo(it.uid, user)
 
                     }
                 }.addOnFailureListener {
@@ -58,7 +61,7 @@ import javax.inject.Inject
         }
     }
 
-    private fun saveUserInfo(userUid:String, user:User){
+    private fun saveUserInfo(userUid: String, user: User) {
         db.collection(USER_COLLECTION)
             .document(userUid)
             .set(user)

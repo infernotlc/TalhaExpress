@@ -37,24 +37,23 @@
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="@id/ellipse"
         app:layout_constraintEnd_toEndOf="@id/ellipse"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="@id/ellipse"
         app:layout_constraintTop_toTopOf="@id/guidelineLeftTexture"
-        app:layout_constraintVertical_bias="0.679" />
+        app:layout_constraintVertical_bias="0.782" />
 
     <TextView
         android:id="@+id/tvQuality"
+        style="@style/h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/h2"
-        app:layout_constraintStart_toStartOf="@id/tvRightAddressForShopping"
-        app:layout_constraintEnd_toEndOf="@id/tvRightAddressForShopping"
-        app:layout_constraintTop_toBottomOf="@id/tvRightAddressForShopping"
-        android:textAlignment="center"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="@string/quality"
-        android:layout_marginTop="15dp"
-        />
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/tvRightAddressForShopping"
+        app:layout_constraintStart_toStartOf="@id/tvRightAddressForShopping"
+        app:layout_constraintTop_toBottomOf="@id/tvRightAddressForShopping" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -73,7 +72,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/tvQuality"
         app:layout_constraintStart_toStartOf="@id/tvQuality"
-        app:layout_constraintTop_toBottomOf="@id/tvQuality" />
+        app:layout_constraintTop_toBottomOf="@id/tvQuality"
+        app:layout_constraintVertical_bias="0.349" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineLeftTexture"

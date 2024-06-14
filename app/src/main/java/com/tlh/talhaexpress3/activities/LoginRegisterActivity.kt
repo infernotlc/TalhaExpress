@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.tlh.talhaexpress3.R
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
 class LoginRegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
