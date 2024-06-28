@@ -14,7 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 class ShoppingActivity : AppCompatActivity() {
 
-    val binding by lazy {
+    private val binding by lazy {
         ActivityShoppingBinding.inflate(layoutInflater)
     }
 
