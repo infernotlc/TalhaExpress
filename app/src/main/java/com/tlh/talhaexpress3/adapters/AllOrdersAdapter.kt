@@ -1,10 +1,15 @@
 package com.tlh.talhaexpress3.adapters
 
+import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.tlh.talhaexpress3.R
+import com.tlh.talhaexpress3.data.order.Order
+import com.tlh.talhaexpress3.data.order.OrderStatus
+import com.tlh.talhaexpress3.data.order.getOrderStatus
 
 class AllOrdersAdapter : RecyclerView.Adapter<AllOrdersAdapter.OrdersViewHolder>() {
 
